@@ -154,7 +154,7 @@ void send_spi() {
   // be short, no more than a few machine cycles, so it should be OK.
   while (digitalRead(SPI_CLEAR_TO_SEND_NOT) == HIGH) {
   }
- digitalWrite(GREEN_LED, HIGH);
+  digitalWrite(GREEN_LED, HIGH);
 
   while(digitalRead(SPI_CLEAR_TO_SEND_NOT) == HIGH) {
     vTaskDelay(pdMS_TO_TICKS(1));
